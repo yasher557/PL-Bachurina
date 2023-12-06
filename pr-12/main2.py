@@ -19,7 +19,6 @@ def get_data():
             i.startswith('"name": ') or i.startswith('"url": ')
         ):
             list_of_data.append(i)
-    print(list_of_data)
     with open('result_app.json', 'w') as file:
         json.dump(list_of_data, file, indent=4)
     notification = Label(text='результат записан в файл "result_app"')
